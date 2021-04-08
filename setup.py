@@ -1,13 +1,5 @@
 from setuptools import find_packages, setup
-
-install_requires = [
-    "POT",
-    "sklearn",
-    "scipy",
-    "numpy",
-    "torch",
-    "git+https://github.com/atong01/unbalanced_gromov_wasserstein",
-]
+from pathlib import Path
 
 setup(
     name="SCOT",
@@ -15,6 +7,9 @@ setup(
     description="Gromov-Wasserstein optimal transport for aligning single-cell multi-omics data",
     author="Pinar Demetci",
     packages=find_packages(),
+    python_requires='>=3.6',
+    install_requires=[
+        l.strip() for l in Path('requirements.txt').read_text('utf-8').splitlines()
+    ],
     license="MIT",
-    install_requires=install_requires,
 )

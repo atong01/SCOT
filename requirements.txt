@@ -4,4 +4,4 @@ sklearn
 matplotlib
 numpy
 torch
-
+#git+https://github.com/atong01/unbalanced_gromov_wasserstein
