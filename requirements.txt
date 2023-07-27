@@ -1,6 +1,6 @@
 POT
 scipy
-sklearn
+scikit-learn
 matplotlib
 numpy
 torch
